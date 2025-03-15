@@ -44,4 +44,17 @@ public class Delimiter {
     public char getDelimiter() {
         return delimiter;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Delimiter other = (Delimiter) obj;
+        return this.delimiter == other.delimiter;
+    }
+
+    @Override
+    public int hashCode() {
+        return Character.hashCode(delimiter);
+    }
 }

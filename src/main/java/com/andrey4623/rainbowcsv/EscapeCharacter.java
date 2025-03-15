@@ -35,4 +35,17 @@ public class EscapeCharacter {
     public String getName() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        EscapeCharacter other = (EscapeCharacter) obj;
+        return this.escapeCharacter == other.escapeCharacter;
+    }
+
+    @Override
+    public int hashCode() {
+        return Character.hashCode(escapeCharacter);
+    }
 }
